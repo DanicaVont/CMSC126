@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script>
+        $(function() {
+            $('.tabs-nav a').click(function() {
+
+                // Check for active
+                $('.tabs-nav li').removeClass('active');
+                $(this).parent().addClass('active');
+
+                // Display active tab
+                let currentTab = $(this).attr('href');
+                $('.tabs-content div').hide();
+                $(currentTab).show();
+
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <img src="images/logo.png" alt="logo">
+            <a href="#" class="title">University of the Philippines <span>Mindanao</span></a>
+            <div id="menu" class="fas fa-bars"></div>
+            <nav class="navbar">
+                <a href="Home.html">Home</a>
+                <a href="Academic Units.html">Academic Units</a>
+                <a href="Academic Programs.html">Academic Programs</a>
+                <a href="Sign-Up.html">Sign-Up</a>
+            </nav>
+        </header>
+
+        <!-- home section  -->
+        <section class="home">
+            <div id="content">
+                <article class="tabs-nav">
+                    <ul>
+                        <li><a href="#tab1">
+                                <h3>History</h3>
+                            </a></li>
+                        <li><a href="#tab2">
+                                <h3>Vision</h3>
+                            </a></li>
+                        <li><a href="#tab3">
+                                <h3>Mission</h3>
+                            </a></li>
+                        <li><a href="#tab4">
+                                <h3>Contact Us</h3>
+                            </a></li>
+                    </ul>
+                </article>
+
+                <div class="tabs-content">
+                    <div id="tab1">
+                        <p><br><span style="font-size: 12pt; text-align: justify; font-family: 'book antiqua', palatino;">Republic Act 7889, An Act Creating the University of the Philippines in Mindanao, was signed into law by President Fidel V. Ramos on February 20, 1995. But the vision of having a UP in Mindanao however started way before that.<br /><br />The UP Alumni Association-Davao Chapter, which was established on December 3, 1949, had wanted for more than two decades for the establishment of a UP in Mindanao. As early as 1961, the UP Summer School already offered extension courses in Law, Business Administration and Education, with the old location of the Davao Central Elementary School as venue.</span></p>
+                        <p><span style="font-size: 12pt; text-align: justify;font-family: 'book antiqua', palatino;">On November 24 and 25, 1989, the UPAA Davao Chapter hosted the 12th UP Alumni Institute with Senator Vicente Paterno as keynote speaker. UP President Jose Abueva, who attended the conference, was confronted with the strong and united voice of about 630 alumni in attendance as well as the media and the business sector, all clamoring for a resolution that would promote the establishment of a UP in Mindanao in Davao City. The resolution was unanimously approved and adopted by the Institute on November 25, 1989. This was submitted to the UPAA National and endorsed to the Board of Regents.<br /><br />The vision of UP in Mindanao began to materialize when, on the third regular session of the House of Representatives on April 30, 1990, 1st District Representative Prospero C. Nograles introduced House Bill No. 30358, also known as an “Act to establish the University of the Philippines in Mindanao.”<br /><br />A public hearing on HB No. 30358 was conducted by Senator Edgardo Angara (then Chairman of the Senate Committee on Education) on October 12, 1990 at the Davao Chamber of Commerce, Kalakalan Hall. It was sponsored by Representative Nograles and Rodolfo del Rosario of Davao del Norte. A strong sentiment for the establishment of a UP in Mindanao pervaded the public hearing. To alleviate the strong clamor for a UP in Mindanao, Abueva created instead the UP Consortium System, much like the Open University. <br /><br />When Abueva’s term ended, President Fidel V. Ramos appointed Emil Q. Javier as UP President. President Ramos had previously instructed President Javier to create a fact-finding committee composed of Regents Oscar Alfonso, Vice-President for Planning Fortunato dela Peña, Atty. Carmelita Yadao-Guno and Prof. Rogelio Cuyno. The committee came to Davao for an ocular inspection of University of Southern Philippines (USP) in Bago Oshiro. <br /><br />After receiving the committee report, Javier did not pursue the plan to convert USP to UP in Mindanao due to the resistance demonstrated by the USP faculty and staff. Instead, he opted for congressional action. At the same time, the committee also talked with the National Bureau of Plant and Industry director Nerios Roperos for the segregation of 204 hectares of the BPI area in Bago Oshiro for the UP in Mindanao campus. The task of pursuing the House Bill for UP in Mindanao in Congress was given to Davao City 3rd District Congressman Elias B. Lopez, as he was the only UP alumnus among the Davao representatives.<br /><br />Republic Act 7889, the bill creating UP in Mindanao was finally enacted into law on February 20, 1995. On March 22 of the same year, the Board of Regents passed a resolution officially creating the University of the Philippines in Mindanao. To emphasize the importance of RA 7889 to the Mindanaoans, a reenactment of the signing was held at the Central Bank, Davao City with President Fidel V. Ramos himself in attendance.<br /><br />The Lee Business Center in J. Luna corner J. dela Cruz Streets and the Casa Mercado Building in Matina served as UP in Mindanao’s home from March to September 1995, and from September to January 1996, respectively.<br /><br />On June 1996, the College of Arts and Sciences and the School of Management were created. After a year, the CAS was split into the College of Humanities and Social Sciences and the College of Science and Mathematics. The School of Management was retained.<br /><br />On February 20, the Oblation was installed in Bago Oshiro during the University’s 3rd Foundation Anniversary. The Board of Regents granted full autonomy to UP in Mindanao, on February 26, 1998, making it the sixth constituent unit of the UP System. Dean Rogelio V. Cuyno, was elevated and installed as its 1st Chancellor on December 11, of the same year.</span></p>
+                        <p><span style="font-size: 12pt; text-align: justify;font-family: 'book antiqua', palatino;">The 2nd Chancellor was Ricardo de Ungria, the 3rd Chancellor was Gilda C. Rivero, and the 4th Chancellor is Sylvia B. Concepcion. The 5th Chancellor is Larry N. Digal (term: March 2019-February 2021).</span></p>
+                        <p><span style="font-size: 12pt; text-align: justify;font-family: 'book antiqua', palatino;"><em>Reviewed: RAE, 24 August 2017<br /></em></span></p>
+                        <p><span style="font-size: 12pt; text-align: justify;font-family: 'book antiqua', palatino;"><a style="text-decoration: none;" href="/index.php/depo-medrol-online-best-price">&nbsp;</a></span></p>
+                    </div>
+                    <div id="tab2" style="padding:2rem 7%; padding-bottom: 400px;">
+                        <p><br><br><span style="font-size: 12pt; font-family: 'book antiqua', palatino;">An internationally competitive graduate, research, and public service university in Mindanao, leading in the study of arts, cultures, and sustainable biosystems.</p>
+                    </div>
+
+                    <div id="tab3" style="padding:2rem 7%; padding-bottom: 380px;">
+                        <p><br><br><span style="font-size: 12pt; font-family: 'book antiqua', palatino;">The University of the Philippines Mindanao provides distinctive interdisciplinary education, research &amp; development, and public engagement that are responsive and relevant to the diverse sectors in Mindanao, and sustains Mindanao heritage and biodiversity through innovative systems and technologies.</p>
+                    </div>
+
+                    <div id="tab4">
+                        <p><br><span style="font-size: 12pt; font-family: 'book antiqua', palatino;"><span style="text-decoration: underline;"><strong>College of Humanities &amp; Social Sciences (CHSS), Administration Building, Right Wing</strong></span>: &nbsp;</span></p>
+                        <p><span style="font-size: 12pt; font-family: 'book antiqua', palatino;">Office of the Dean: 293-0863&nbsp;&nbsp;</span></p>
+                        <p><span style="font-size: 12pt; font-family: 'book antiqua', palatino;">Dept. of Architecture: 293-0863&nbsp; <br />Dept. of Humanities: 293-0863 <br />Dept. of Social Sciences: 293-0863<br /></span></p>
+                        <p><span style="font-size: 12pt; font-family: 'book antiqua', palatino;">Office of the College Secretary: <em><span style="color: #222222;">293-0863</span></em><em><br /></em>Department of Human Kinetics: <em>293-0863</em>&nbsp;</span></p>
+                        <p><span style="font-size: 12pt; font-family: 'book antiqua', palatino;"><span style="color: #222222;">Office of Gender and Development; Office of Anti-Sexual Harassment, <span style="text-decoration: underline;">297-3652</span></span><em><span style="color: #222222;">&nbsp;<br /></span></em></span></p>
+                        <p><span style="font-size: 12pt; font-family: 'book antiqua', palatino;"><span style="text-decoration: underline;"><strong>College of Science &amp; Mathematics (CSM) Building</strong></span>: <br /></span></p>
+                        <p><span style="font-size: 12pt; font-family: 'book antiqua', palatino;">Office of the Dean, 293-0863</span></p>
+                        <p><span style="font-size: 12pt; font-family: 'book antiqua', palatino;">Front Entrance Guard: <em>293-0312</em>&nbsp; </span></p>
+                        <p><span style="font-size: 12pt; font-family: 'book antiqua', palatino;">Department of Mathematics, Physics and Computer Science (DMPCS),&nbsp;<span style="text-decoration: underline;"><em>293-0303</em></span>&nbsp;&nbsp;&nbsp;</span></p>
+                        <p><span style="font-size: 12pt; font-family: 'book antiqua', palatino;"> <span style="text-decoration: underline;"><strong>School of Management (SOM)</strong></span><strong>:</strong></span></p>
+                        <p><span style="font-size: 12pt; font-family: 'book antiqua', palatino;">Office of the Dean: <span style="text-decoration: underline;"><em>295-2750</em></span>&nbsp;</span></p>
+                        <p><span style="font-size: 12pt; font-family: 'book antiqua', palatino;">Office of the College Secretary: <em style="font-size: 13.3333px;"><span style="text-decoration: underline;">295-2188</span><br /></em></span></p>
+                        <p><span style="font-size: 12pt; font-family: 'book antiqua', palatino;"><span style="text-decoration: underline;"><strong>Elias B. Lopez (EBL) Hall Building</strong></span>:<br /></span></p>
+                        <p><span style="font-size: 12pt; font-family: 'book antiqua', palatino;">EBL Hall Dormitory &amp; Clinic: <em><span style="text-decoration: underline;">293-0863</span></em></span><br /><span style="font-size: 12pt; font-family: 'book antiqua', palatino;">University Library, Main Library: <em><span style="text-decoration: underline;">293-1764</span></em>&nbsp;</span><br /><span style="font-size: 12pt; font-family: 'book antiqua', palatino;">Interactive Learning Center / Learning Resource Center: <span style="text-decoration: underline;">296-3563</span>&nbsp;<br /></span></p>
+                        <p><span style="font-size: 12pt; font-family: 'book antiqua', palatino;"><span style="text-decoration: underline;"><strong>UP Mindanao Foundation Inc.</strong></span>: Atty. Marie Dinah Tolentino-Fuentes, President. Mail: Door 9, Quitain Building, F. Iñigo St. (formerly Anda St.), Davao City. <em>T</em><em>elefax <span style="text-decoration: underline;"></span></em><em>227-5326</em>. <br /></span></p>
+                        <p><span style="font-size: 12pt; font-family: 'book antiqua', palatino;"><span style="text-decoration: underline;"><strong>UP Alumni Association Davao Inc.</strong></span>: Mr. Pedro Quitain III, President; Mailing Address:&nbsp;Door 9, Quitain Building, F. Iñigo St. (formerly Anda St.), Davao City.&nbsp;<em style="font-size: 13.3333px;">T</em><em style="font-size: 13.3333px;">elefax&nbsp;</em><em style="font-size: 13.3333px;">227-5326</em>.&nbsp;&nbsp;</span><br><br></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <script>
+        let menu = document.querySelector('#menu');
+        let navbar = document.querySelector('.navbar');
+
+        menu.onclick = () => {
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+        }
+
+        window.onscroll = () => {
+            menu.classList.remove('fa-times');
+            navbar.classList.remove('active');
+        }
+    </script>
+
+</body>
+</html>

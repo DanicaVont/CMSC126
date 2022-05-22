@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    <!-- Javascript -->
+    <script>
+        $(function() {
+            var Province = [
+                "Abra",
+                "Agusan Del Norte",
+                "Agusan Del Sur",
+                "Aklan",
+                "Albay",
+                "Antique",
+                "Apayao",
+                "Aurora",
+                "Basilan",
+                "Bataan",
+                "Batanes",
+                "Batangas",
+                "Benguet",
+                "Biliran",
+                "Bohol",
+                "Bukidnon",
+                "Bulacan",
+                "Cagayan",
+                "Camarines Norte",
+                "Camarines Sur",
+                "Camiguin",
+                "Capiz",
+                "Catanduanes",
+                "Cavite",
+                "Cebu",
+                "Compostella Valley",
+                "Cotabato",
+                "Davao Del Norte",
+                "Davao Del Sur",
+                "Davao Occidental",
+                "Davao Oriental",
+                "Dinagat Islands",
+                "Eastern Samar",
+                "Guimaras",
+                "Ifugao",
+                "Ilocos Norte",
+                "Ilocos Sur",
+                "Iloilo",
+                "Isabela",
+                "Kalinga",
+                "La Union",
+                "Laguna",
+                "Lanao Del Norte",
+                "Lanao Del Sur",
+                "Leyte",
+                "Maguindanao",
+                "Marinduque",
+                "Masbate",
+                "Misamis Occidental",
+                "Misamis Oriental",
+                "Mountain Province",
+                "Negros Occidental",
+                "Negros Oriental",
+                "Northern Samar",
+                "Nueva Ecija",
+                "Nueva Vizcaya",
+                "Occidental Mindoro",
+                "Oriental Mindoro",
+                "Palawan",
+                "Pampanga",
+                "Pangasinan",
+                "Quezon",
+                "Quirino",
+                "Rizal",
+                "Romblon",
+                "Samar",
+                "Sarangani",
+                "Siquijor",
+                "Sorsogon",
+                "South Cotabato",
+                "Southern Leyte",
+                "Sultan Kudarat",
+                "Sulu",
+                "Surigao Del Norte",
+                "Surigao Del Sur",
+                "Tarlac",
+                "Tawi-Tawi",
+                "Zambales",
+                "Zamboanga Del Norte",
+                "Zamboanga Del Sur",
+                "Zamboanga Sibugay"
+            ];
+            $("#automplete-2").autocomplete({
+                source: Province,
+                autoFocus: true
+            });
+        });
+    </script>
+    <script>
+        function handleSubmit() {
+            const firstname = document.getElementById('fname').value;
+            const middlename = document.getElementById('mname').value;
+            const lastname = document.getElementById('lname').value;
+            var gender = $('input[name="gender"]:checked').val();
+            var date = $("#datepicker").val();
+            var province = $("#automplete-2").val();
+            var yearlevel = $("#spinner-1").spinner("value");
+
+            sessionStorage.setItem("FIRSTNAME", firstname);
+            sessionStorage.setItem("MIDDLENAME", middlename);
+            sessionStorage.setItem("LASTNAME", lastname);
+            sessionStorage.setItem("GENDER", gender);
+            sessionStorage.setItem("DATE", date);
+            sessionStorage.setItem("PROVINCE", province);
+            sessionStorage.setItem("YEARLEVEL", yearlevel);
+            return;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+
+            <img src="images/logo.png" alt="logo">
+
+            <a href="#" class="title">University of the Philippines <span>Mindanao</span></a>
+
+            <div id="menu" class="fas fa-bars"></div>
+
+            <nav class="navbar">
+                <a href="Home.html">Home</a>
+                <a href="Academic Units.html">Academic Units</a>
+                <a href="Academic Programs.html">Academic Programs</a>
+                <a href="Sign-Up.html">Sign-Up</a>
+            </nav>
+
+        </header>
+
+        <h1 class="heading">Sign-Up Form</h1>
+
+        <!-- SIGN UP section  -->
+        <section class="sign-up">
+
+            <form action="Information.html" method="POST">
+
+                <label>
+                    <h3>Firstname:</h3>
+                </label>
+                <div class="box">
+                    <input id="fname" />
+                </div>
+                <label>
+                    <h3>Middlename:</h3>
+                </label>
+                <div class="box">
+                    <input id="mname" />
+                </div>
+                <label>
+                    <h3>Lastname:</h3>
+                </label>
+                <div class="box">
+                    <input id="lname" />
+                </div>
+
+                <label>
+                    <h3>Gender: </h3>
+                </label>
+                <div class="box">
+                    <label>Male</label>
+                    <input type="checkbox" name="gender" value="Male" class='checkbox'>
+                    <br>
+                    <label>Female</label>
+                    <input type="checkbox" name="gender" value="Female" class='checkbox'>
+
+                </div>
+
+                <label for="date">
+                    <h3>Date:</h3>
+                </label>
+                <div class="box">
+                    <input id="datepicker" width="267" />
+                </div>
+
+
+
+                <label for="automplete-2">
+                    <h3>Province:</h3>
+                </label>
+                <div class="box">
+                    <input id="automplete-2">
+                </div>
+
+                <label for="yearlevel">
+                    <h3>Year level:</h3>
+                </label>
+                <div class="box">
+                    <input type="text" id="spinner-1" value="0">
+                </div>
+
+                <button class="btn" onclick="handleSubmit()">
+                    <h3>Submit</h3>
+                </button>
+
+            </form>
+
+        </section>
+        <!-- footer section  -->
+
+        <section class="footer">
+
+            <div class="box-container">
+                <div class="box">
+                    <h3>About us</h3>
+                    <p>The University of the Philippines Mindanao (also referred to as UPMin or UP Mindanao) is
+                        a public research university, serving as the sixth constituent unit of the University of
+                        the Philippines System. UP Mindanao is the only constituent university of the UP System
+                        that was created through legislative action.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        $("input").checkboxradio();
+    </script>
+    <script>
+        $('#datepicker').datepicker();
+    </script>
+    <style type="text/css">
+        #spinner-1 input {
+            width: 100px
+        }
+    </style>
+    <script>
+        $(function() {
+            $("#spinner-1").spinner();
+        });
+    </script>
+    <script>
+        let menu = document.querySelector('#menu');
+        let navbar = document.querySelector('.navbar');
+
+        menu.onclick = () => {
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+        }
+
+        window.onscroll = () => {
+            menu.classList.remove('fa-times');
+            navbar.classList.remove('active');
+        }
+    </script>
+
+</body>
+
+</html>

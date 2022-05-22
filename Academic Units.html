@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Units</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script>
+        $(function() {
+            $("#degree").selectmenu();
+
+            $("#files").selectmenu();
+
+            $("#number")
+                .selectmenu()
+                .selectmenu("menuWidget")
+                .addClass("overflow");
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+
+            <img src="images/logo.png" alt="logo">
+
+            <a href="#" class="title">University of the Philippines <span>Mindanao</span></a>
+
+            <div id="menu" class="fas fa-bars"></div>
+
+            <nav class="navbar">
+                <a href="Home.html">Home</a>
+                <a href="Academic Units.html">Academic Units</a>
+                <a href="Academic Programs.html">Academic Programs</a>
+                <a href="Sign-Up.html">Sign-Up</a>
+            </nav>
+
+        </header>
+
+        <!-- course section  -->
+
+        <section>
+            <div class="unit" style="padding-bottom: 160px;">
+
+                <form action="#">
+
+
+                    <label for="degree">
+                        <h3>College of Humanities and Social Science</h3>
+                    </label>
+                    <select name="degree" id="degree">
+                        <option>BS Anthropology</option>
+                        <option>BS Architecture</option>
+                        <option>BA Communication and Media Arts</option>
+                        <option>BA English</option>
+                        <option>Diploma in Exercise and Sports Science</option>
+                        <option>Diploma/Master in Urban and Regional Planning</option>
+                    </select>
+
+
+                    <label for="degree">
+                        <h3>College of Science and Mathematics</h3>
+                    </label>
+                    <select name="degree" id="degree">
+                        <option>BS Applied Mathematics</option>
+                        <option>BS Biology</option>
+                        <option>BS Computer Science</option>
+                        <option>BS Food Technology</option>
+                        <option>MS Food Science</option>
+                    </select>
+
+
+                    <label for="degree">
+                        <h3>School of Management</h3>
+                    </label>
+                    <select name="degree" id="degree">
+                        <option>BS Agribusiness Economics</option>
+                        <option>Master in Management</option>
+                        <option>PhD by Research </option>
+                    </select>
+
+
+                </form>
+
+            </div>
+        </section>
+
+
+    </div>
+
+    <script>
+        let menu = document.querySelector('#menu');
+        let navbar = document.querySelector('.navbar');
+
+        menu.onclick = () => {
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+        }
+
+        window.onscroll = () => {
+            menu.classList.remove('fa-times');
+            navbar.classList.remove('active');
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Information</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script>
+        window.addEventListener('load', () => {
+
+            const firstname = sessionStorage.getItem('FIRSTNAME');
+            const middlename = sessionStorage.getItem('MIDDLENAME');
+            const lastname = sessionStorage.getItem('LASTNAME');
+            const gender = sessionStorage.getItem('GENDER');
+            const date = sessionStorage.getItem('DATE');
+            const province = sessionStorage.getItem('PROVINCE');
+            const yearlevel = sessionStorage.getItem('YEARLEVEL');
+
+            document.getElementById('result-firstname').innerHTML = firstname;
+            document.getElementById('result-middlename').innerHTML = middlename;
+            document.getElementById('result-lastname').innerHTML = lastname;
+            document.getElementById('result-gender').innerHTML = gender;
+            document.getElementById('result-date').innerHTML = date;
+            document.getElementById('result-province').innerHTML = province;
+            document.getElementById('result-yearlevel').innerHTML = yearlevel;
+
+        })
+    </script>
+</head>
+
+<body>
+
+    <div class="content">
+        <h3>
+            Name: <span id="result-firstname"></span> <span id="result-middlename"></span> <span id="result-lastname"></span>
+        </h3>
+        <h3>
+            Gender: <span id="result-gender"></span>
+        </h3>
+        <h3>
+            Date: <span id="result-date"></span>
+        </h3>
+        <h3>
+            Province: <span id="result-province"></span>
+        </h3>
+        <h3>
+            Year level: <span id="result-yearlevel"></span>
+        </h3>
+    </div>
+
+</body>
+</html>
